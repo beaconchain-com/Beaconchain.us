@@ -1,0 +1,2 @@
+docker pull gobitfly/eth2-beaconchain-explorer
+docker run -p 3500:3500 gobitfly/eth2-beaconchain-explorer
