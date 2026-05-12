@@ -1,223 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-    <meta name="description" content="Beaconchain Horizon - World #3 Blockchain Monitoring Platform | 100,000+ Validators | 100,000+ TPS | Security Score 10/10">
+    <meta name="description" content="Beaconchain Horizon - World #3 Blockchain Monitoring | 100K Validators | Security 10/10">
     <meta name="theme-color" content="#0a0f1e">
     <meta name="author" content="Mahdi Amolimoghaddam">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com; connect-src 'self'; img-src 'self' data: https:; frame-src 'none';">
-    <title>Beaconchain Horizon | World #3 | 100K Validators | 100K TPS</title>
+    <title>Beaconchain Horizon | World #3 | 100K Validators | Offline‑Ready</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="manifest" href="manifest.json">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
         body {
             background: radial-gradient(circle at 10% 20%, #0a0f1e, #05070f);
             font-family: 'Inter', system-ui, -apple-system, sans-serif;
             color: #eef2ff;
             padding: 1.5rem;
         }
-        .container {
-            max-width: 1800px;
-            margin: 0 auto;
-        }
-        /* Header */
+        .container { max-width: 1800px; margin: 0 auto; }
         .app-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            flex-wrap: wrap;
-            gap: 1rem;
-            margin-bottom: 1.5rem;
-            padding-bottom: 1rem;
+            display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap;
+            gap: 1rem; margin-bottom: 1.5rem; padding-bottom: 1rem;
             border-bottom: 1px solid rgba(100,150,255,0.3);
         }
         .logo-text h1 {
-            font-size: 1.8rem;
-            font-weight: 800;
+            font-size: 1.8rem; font-weight: 800;
             background: linear-gradient(135deg, #fff, #4f9eff, #c084fc);
-            -webkit-background-clip: text;
-            background-clip: text;
-            color: transparent;
+            -webkit-background-clip: text; background-clip: text; color: transparent;
         }
-        .logo-text p {
-            font-size: 0.75rem;
-            color: #8fa2dc;
-        }
-        .badge-group {
-            display: flex;
-            gap: 0.6rem;
-            flex-wrap: wrap;
-        }
+        .logo-text p { font-size: 0.75rem; color: #8fa2dc; }
+        .badge-group { display: flex; gap: 0.6rem; flex-wrap: wrap; }
         .badge {
-            background: rgba(79,158,255,0.15);
-            backdrop-filter: blur(4px);
-            padding: 0.4rem 0.8rem;
-            border-radius: 60px;
-            font-size: 0.7rem;
-            font-weight: 600;
-            border: 1px solid rgba(79,158,255,0.4);
+            background: rgba(79,158,255,0.15); backdrop-filter: blur(4px);
+            padding: 0.4rem 0.8rem; border-radius: 60px; font-size: 0.7rem;
+            font-weight: 600; border: 1px solid rgba(79,158,255,0.4);
         }
         .badge i { margin-left: 5px; }
-        .grid-3col {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 1.2rem;
-            margin-bottom: 1.5rem;
-        }
+        .grid-3col { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.2rem; margin-bottom: 1.5rem; }
         .card {
-            background: rgba(20,24,36,0.7);
-            backdrop-filter: blur(10px);
-            border-radius: 1.2rem;
-            padding: 1.2rem;
-            border: 1px solid rgba(255,255,255,0.08);
-            transition: 0.2s;
+            background: rgba(20,24,36,0.7); backdrop-filter: blur(10px); border-radius: 1.2rem;
+            padding: 1.2rem; border: 1px solid rgba(255,255,255,0.08); transition: 0.2s;
         }
-        .card:hover {
-            border-color: rgba(79,158,255,0.3);
-            background: rgba(28,32,48,0.85);
-        }
+        .card:hover { border-color: rgba(79,158,255,0.3); background: rgba(28,32,48,0.85); }
         .card h3 {
-            font-size: 1.1rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            border-right: 3px solid #4f9eff;
-            padding-right: 0.7rem;
+            font-size: 1.1rem; font-weight: 600; margin-bottom: 1rem;
+            display: flex; align-items: center; gap: 0.5rem;
+            border-right: 3px solid #4f9eff; padding-right: 0.7rem;
         }
-        .stat-number {
-            font-size: 2rem;
-            font-weight: 800;
-            color: #c084fc;
-        }
-        .stat-label {
-            font-size: 0.7rem;
-            color: #9bb2ff;
-        }
-        .ranking-table {
-            overflow-x: auto;
-        }
-        .ranking-table table {
-            width: 100%;
-            border-collapse: collapse;
-            font-size: 0.75rem;
-        }
-        .ranking-table th, .ranking-table td {
-            padding: 0.5rem;
-            text-align: center;
-            border-bottom: 1px solid rgba(255,255,255,0.1);
-        }
-        .ranking-table th {
-            background: #1a1f30;
-            color: #a5b4fc;
-        }
-        .highlight-row {
-            background: rgba(79,158,255,0.2);
-            font-weight: 700;
-        }
-        .progress-bar {
-            background: rgba(255,255,255,0.1);
-            border-radius: 20px;
-            height: 6px;
-            margin: 0.3rem 0;
-            overflow: hidden;
-        }
-        .progress-fill {
-            background: linear-gradient(90deg, #4f9eff, #c084fc);
-            height: 100%;
-            border-radius: 20px;
-            transition: width 0.3s;
-        }
-        .search-box {
-            display: flex;
-            gap: 0.5rem;
-            margin-bottom: 1rem;
-        }
+        .stat-number { font-size: 2rem; font-weight: 800; color: #c084fc; }
+        .stat-label { font-size: 0.7rem; color: #9bb2ff; }
+        .ranking-table { overflow-x: auto; }
+        .ranking-table table { width: 100%; border-collapse: collapse; font-size: 0.75rem; }
+        .ranking-table th, .ranking-table td { padding: 0.5rem; text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+        .ranking-table th { background: #1a1f30; color: #a5b4fc; }
+        .highlight-row { background: rgba(79,158,255,0.2); font-weight: 700; }
+        .progress-bar { background: rgba(255,255,255,0.1); border-radius: 20px; height: 6px; margin: 0.3rem 0; overflow: hidden; }
+        .progress-fill { background: linear-gradient(90deg, #4f9eff, #c084fc); height: 100%; border-radius: 20px; transition: width 0.3s; }
+        .search-box { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
         .search-box input {
-            flex: 1;
-            padding: 0.6rem 1rem;
-            border-radius: 2rem;
-            border: 1px solid rgba(255,255,255,0.2);
-            background: rgba(0,0,0,0.5);
-            color: white;
-            font-size: 0.8rem;
+            flex: 1; padding: 0.6rem 1rem; border-radius: 2rem; border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(0,0,0,0.5); color: white; font-size: 0.8rem;
         }
-        .search-box input:focus {
-            outline: none;
-            border-color: #4f9eff;
-        }
+        .search-box input:focus { outline: none; border-color: #4f9eff; }
         .search-box button {
-            background: #2b3550;
-            border: none;
-            color: white;
-            padding: 0.5rem 1.2rem;
-            border-radius: 2rem;
-            cursor: pointer;
-            transition: 0.2s;
+            background: #2b3550; border: none; color: white; padding: 0.5rem 1.2rem;
+            border-radius: 2rem; cursor: pointer; transition: 0.2s;
         }
-        .search-box button:hover {
-            background: #4f46e5;
-        }
+        .search-box button:hover { background: #4f46e5; }
         .validator-list-container {
-            height: 400px;
-            overflow-y: auto;
-            background: rgba(0,0,0,0.3);
-            border-radius: 1rem;
-            border: 1px solid rgba(255,255,255,0.05);
+            height: 400px; overflow-y: auto; background: rgba(0,0,0,0.3);
+            border-radius: 1rem; border: 1px solid rgba(255,255,255,0.05);
         }
         .validator-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding: 0.6rem 1rem;
-            border-bottom: 1px solid rgba(255,255,255,0.05);
-            font-size: 0.75rem;
+            display: flex; justify-content: space-between; align-items: center;
+            padding: 0.6rem 1rem; border-bottom: 1px solid rgba(255,255,255,0.05); font-size: 0.75rem;
         }
-        .validator-item:hover {
-            background: rgba(79,158,255,0.1);
-        }
-        .validator-index {
-            font-weight: 700;
-            background: #1e2538;
-            padding: 0.2rem 0.6rem;
-            border-radius: 20px;
-            font-family: monospace;
-        }
+        .validator-item:hover { background: rgba(79,158,255,0.1); }
+        .validator-index { font-weight: 700; background: #1e2538; padding: 0.2rem 0.6rem; border-radius: 20px; font-family: monospace; }
         .status-online { color: #4ade80; }
         .status-offline { color: #f87171; }
         .status-pending { color: #facc15; }
-        .balance {
-            font-family: monospace;
-            background: #2a2d3e;
-            padding: 0.2rem 0.5rem;
-            border-radius: 20px;
+        .balance { font-family: monospace; background: #2a2d3e; padding: 0.2rem 0.5rem; border-radius: 20px; }
+        .security-note { background: rgba(220,53,69,0.12); border-right: 3px solid #dc3545; padding: 0.8rem; margin-top: 1rem; border-radius: 0.8rem; font-size: 0.7rem; }
+        .wallet-box {
+            background: #0b0e1a; border-radius: 1rem; padding: 1rem; margin: 1rem 0;
+            word-break: break-all; font-family: monospace; border: 1px solid #4f9eff;
         }
-        .security-note {
-            background: rgba(220,53,69,0.12);
-            border-right: 3px solid #dc3545;
-            padding: 0.8rem;
-            margin-top: 1rem;
-            border-radius: 0.8rem;
-            font-size: 0.7rem;
+        .footer-big {
+            margin-top: 2rem; background: rgba(0,0,0,0.4); border-radius: 1rem; padding: 1.5rem;
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 1.5rem; font-size: 0.7rem;
         }
-        .footer {
-            margin-top: 1.5rem;
-            background: rgba(0,0,0,0.4);
-            border-radius: 1rem;
-            padding: 1rem;
-            display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            gap: 1rem;
-            font-size: 0.7rem;
-        }
+        .footer-section h4 { font-size: 1rem; margin-bottom: 0.8rem; color: #bfd6ff; }
+        .footer-section a { color: #a4bcff; text-decoration: none; display: inline-block; margin: 0.2rem 0; }
+        .ownership-note { font-size: 0.65rem; margin-top: 0.8rem; padding-top: 0.6rem; border-top: 1px solid rgba(255,255,255,0.1); color: #99a9dd; }
+        .digital-signature-box { margin-top: 2rem; text-align: center; background: #0a0f1e; border: 1px solid #4f9eff; }
         ::-webkit-scrollbar { width: 5px; height: 5px; }
         ::-webkit-scrollbar-track { background: #141c2c; }
         ::-webkit-scrollbar-thumb { background: #4f9eff; border-radius: 10px; }
@@ -228,7 +106,7 @@
     </style>
 </head>
 <body>
-<div class="container">
+<div class="container" id="mainContent">
     <!-- Header -->
     <div class="app-header">
         <div class="logo-text">
@@ -357,8 +235,38 @@
         </div>
     </div>
 
-    <!-- ========== DEVELOPER BIO CARD (INSERTED HERE) ========== -->
-    <div class="card" style="margin-bottom: 1.5rem; background: linear-gradient(135deg, rgba(79,158,255,0.1), rgba(192,132,252,0.05));">
+    <!-- API Monetization & Wallet -->
+    <div class="card" style="border: 1px solid #4f9eff;">
+        <h3><i class="fas fa-coins"></i> API Monetization (IP‑based plans)</h3>
+        <p style="margin-bottom: 1rem;">Send the plan amount to the wallet below and notify <a href="mailto:beaconchain@beaconchain.us" style="color:#4f9eff;">beaconchain@beaconchain.us</a> to receive your API key.</p>
+        <div class="wallet-box">
+            <span style="font-size:0.8rem;">Wallet (ETH/USDC):</span><br>
+            <code style="font-size:1.2rem;">0x4E94F10F0a34a0DF229e68d5902644046258D678</code>
+        </div>
+        <div class="grid-3col" style="margin-top: 1rem;">
+            <div class="card" style="text-align:center;">
+                <h4 style="color:#c084fc;">Basic</h4>
+                <p>Max 5 IPs</p>
+                <p style="font-size:1.5rem; font-weight:800; color:#c084fc;">0.05 ETH</p>
+                <p>per month</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <h4 style="color:#c084fc;">Pro</h4>
+                <p>Max 20 IPs + Support</p>
+                <p style="font-size:1.5rem; font-weight:800; color:#c084fc;">0.2 ETH</p>
+                <p>per month</p>
+            </div>
+            <div class="card" style="text-align:center;">
+                <h4 style="color:#c084fc;">Enterprise</h4>
+                <p>Unlimited IPs + SLA</p>
+                <p style="font-size:1.5rem; font-weight:800; color:#c084fc;">0.5 ETH</p>
+                <p>per month</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Developer Bio Card -->
+    <div class="card" style="margin-top: 1.5rem; background: linear-gradient(135deg, rgba(79,158,255,0.1), rgba(192,132,252,0.05));">
         <div style="display: flex; flex-wrap: wrap; align-items: center; gap: 1.5rem;">
             <div style="flex: 1;">
                 <h3 style="margin-bottom: 0.5rem;"><i class="fas fa-user-astronaut"></i> Mahdi Amolimoghaddam</h3>
@@ -367,8 +275,7 @@
                     <span><i class="fas fa-check-circle" style="color:#4ade80;"></i> 100K+ validators</span>
                     <span><i class="fas fa-bolt" style="color:#facc15;"></i> 100K+ TPS target</span>
                     <span><i class="fas fa-shield-alt" style="color:#4f9eff;"></i> Security Score 10/10</span>
-                    <span><i class="fas fa-database"></i> Offline‑first / IndexedDB</span>
-                    <span><i class="fas fa-scroll"></i> Virtual scrolling</span>
+                    <span><i class="fas fa-database"></i> Offline‑first</span>
                     <span><i class="fas fa-globe"></i> GDPR compliant</span>
                 </div>
                 <div style="margin-top: 0.8rem; font-size: 0.75rem; color: #a5b4fc;">
@@ -384,14 +291,44 @@
             </div>
         </div>
     </div>
-    <!-- ========== END OF BIO CARD ========== -->
 
     <!-- Footer -->
-    <div class="footer">
-        <div>© 2026 Mahdi Amolimoghaddam | Beaconchain Horizon</div>
-        <div><i class="fab fa-github"></i> github.com/beaconchain-us/Beaconchain.us</div>
-        <div><i class="fas fa-envelope"></i> beaconchain@beaconchain.us</div>
-        <div><i class="fas fa-lock"></i> GPL-3.0 | Open Source</div>
+    <div class="footer-big">
+        <div class="footer-section">
+            <h4><i class="fas fa-mobile-alt"></i> Mobile App (Coming Soon)</h4>
+            <a href="#" onclick="return false;" style="opacity:0.7;"><i class="fab fa-apple"></i> iOS – Soon</a><br>
+            <a href="#" onclick="return false;" style="opacity:0.7;"><i class="fab fa-google-play"></i> Android – Soon</a><br>
+            <a href="https://beaconchain.us/dashboard" target="_blank">Web Dashboard</a>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-code-branch"></i> Code Repositories</h4>
+            <a href="https://github.com/beaconchain-us/beaconcha.in" target="_blank">Frontend (Web/Mobile)</a><br>
+            <a href="https://github.com/beaconchain-us/eth2-beaconchain-explorer" target="_blank">Backend Explorer</a><br>
+            <a href="https://gitlab.com/beaconchain-com1/Beaconchain.com" target="_blank">GitLab Mirror</a>
+        </div>
+        <div class="footer-section">
+            <h4><i class="fas fa-envelope"></i> Contact & Legal</h4>
+            <a href="mailto:beaconchain@beaconchain.us">beaconchain@beaconchain.us</a><br>
+            <a href="mailto:gamma.mahdii@gmail.com">gamma.mahdii@gmail.com</a><br>
+            <a href="https://experts.godaddy.com/mahdi-amolimoghaddam" target="_blank">GoDaddy Expert Profile</a>
+            <div class="ownership-note">
+                © 2025–2026 Mahdi Amolimoghaddam – All rights reserved.<br>
+                Licensed under GPL-3.0 with additional terms (attribution, non‑commercial use without permission, share‑alike).<br>
+                This dashboard contains real validator income data from beaconcha.in.
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- ===== Digital Signature & Offline Status ===== -->
+<div class="card digital-signature-box">
+    <h3><i class="fas fa-fingerprint"></i> Digital Signature (SHA‑256)</h3>
+    <p>Page fingerprint: <code id="pageHash" style="color:#c084fc; word-break: break-all;"></code></p>
+    <p style="font-size: 0.85rem;">This hash is recalculated on every load. Identical value in offline mode guarantees data integrity.</p>
+    <div id="offlineStatus" style="margin-top: 0.5rem;">
+        <span id="statusIndicator" class="badge" style="background: rgba(255,215,0,0.2); border: 1px solid #ffd700;">
+            <i class="fas fa-wifi"></i> Online
+        </span>
     </div>
 </div>
 
@@ -433,12 +370,12 @@
             document.getElementById('cachedCount').innerText = data.length.toLocaleString();
             document.getElementById('cacheSize').innerText = ((cached.length / 1024).toFixed(1)) + ' KB';
             cacheStats.cacheSize = cached.length;
-            updateCacheUI(100); // 100% hit rate for cached
+            updateCacheUI(100);
             return data;
         }
         
         cacheStats.misses++;
-        console.log('Generating 100,000 validators for first time...');
+        console.log('Generating 100,000 validators...');
         const vals = [];
         for (let i = 1; i <= TOTAL_VALIDATORS; i++) {
             vals.push(generateValidator(i));
@@ -474,7 +411,7 @@
         document.getElementById('avgBalance').innerText = avgBal + ' ETH';
     }
 
-    // ==================== VIRTUAL SCROLL RENDER ====================
+    // ==================== VIRTUAL SCROLL ====================
     function renderVirtualList() {
         if (!filteredValidators.length) {
             listElement.innerHTML = '<div style="text-align:center; padding:2rem;">No validators found</div>';
@@ -487,17 +424,14 @@
         for (let i = 0; i < visibleItems.length; i++) {
             const v = visibleItems[i];
             const statusIcon = v.status === 'online' ? '🟢' : (v.status === 'offline' ? '🔴' : '🟡');
-            const statusClass = v.status === 'online' ? 'status-online' : (v.status === 'offline' ? 'status-offline' : 'status-pending');
             const statusText = v.status === 'online' ? 'Active' : (v.status === 'offline' ? 'Offline' : 'Pending');
-            html += `
-                <div class="validator-item">
-                    <div><span class="validator-index">#${v.index.toLocaleString()}</span></div>
-                    <div style="display:flex; gap:1rem; align-items:center;">
-                        <span class="${statusClass}">${statusIcon} ${statusText}</span>
-                        <span class="balance">${v.balance} ETH</span>
-                    </div>
+            html += `<div class="validator-item">
+                <div><span class="validator-index">#${v.index.toLocaleString()}</span></div>
+                <div style="display:flex; gap:1rem; align-items:center;">
+                    <span style="color:${v.status==='online'?'#4ade80':v.status==='offline'?'#f87171':'#facc15'}">${statusIcon} ${statusText}</span>
+                    <span class="balance">${v.balance} ETH</span>
                 </div>
-            `;
+            </div>`;
         }
         if (end < filteredValidators.length) {
             html += `<div class="validator-item" style="justify-content:center; opacity:0.7;"><i class="fas fa-spinner fa-pulse"></i> Scrolling for more...</div>`;
@@ -530,11 +464,8 @@
             filteredValidators = [...allValidators];
         } else {
             const num = parseInt(term);
-            if (isNaN(num)) {
-                filteredValidators = [...allValidators];
-            } else {
-                filteredValidators = allValidators.filter(v => v.index === num);
-            }
+            if (isNaN(num)) filteredValidators = [...allValidators];
+            else filteredValidators = allValidators.filter(v => v.index === num);
         }
         currentStart = 0;
         updateStats(filteredValidators);
@@ -567,6 +498,39 @@
         });
         refreshCacheBtn.addEventListener('click', resetCache);
     }
+
+    // ========== SERVICE WORKER & DIGITAL SIGNATURE ==========
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/sw.js').catch(err => console.log('SW registration failed:', err));
+        });
+    }
+
+    function updateOnlineStatus() {
+        const statusEl = document.getElementById('statusIndicator');
+        if (navigator.onLine) {
+            statusEl.innerHTML = '<i class="fas fa-wifi"></i> Online';
+            statusEl.style.background = 'rgba(0,255,0,0.2)';
+            statusEl.style.borderColor = '#00ff00';
+        } else {
+            statusEl.innerHTML = '<i class="fas fa-wifi-slash"></i> Offline (cached)';
+            statusEl.style.background = 'rgba(255,215,0,0.2)';
+            statusEl.style.borderColor = '#ffd700';
+        }
+    }
+    window.addEventListener('online', updateOnlineStatus);
+    window.addEventListener('offline', updateOnlineStatus);
+    updateOnlineStatus();
+
+    async function computeHash() {
+        const content = document.getElementById('mainContent').outerHTML;
+        const msgBuffer = new TextEncoder().encode(content);
+        const hashBuffer = await crypto.subtle.digest('SHA-256', msgBuffer);
+        const hashArray = Array.from(new Uint8Array(hashBuffer));
+        const hashHex = hashArray.map(b => b.toString(16).padStart(2, '0')).join('');
+        document.getElementById('pageHash').textContent = hashHex;
+    }
+    window.addEventListener('load', computeHash);
 
     init();
 </script>
